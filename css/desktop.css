@@ -1,0 +1,66 @@
+/*pantalla principal*/
+*{
+    font-size: 72%;
+  }
+  .head__navigation .navigation__logo a{
+    width: 250px;
+  }
+  /*Blogs*/
+  .principal__container{
+    flex-direction: row;
+    padding:70px 100px;
+  }
+  main .blog__user-actions{
+    flex-direction: row;
+  }
+  /*Profile*/
+  main .my-info{
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+    height: 60vh;
+  }
+  .first{
+    grid-column:2 / span 1;
+  }
+  .second{
+    grid-column: 4 / span 1;
+  }
+  .my-info .my-info__container{
+    grid-row: 1 / span 3;
+    margin:0 auto;
+  }
+  .my-info .my-info__detail{
+    display: none;
+    grid-row: 1 / span 3;
+  }
+  .my-info .my-info__photo{
+    grid-row: 1/span 2;
+    grid-column: 3/ span 1;
+    margin: 0 20px;
+    height: 40vh;
+    width: 20vw;
+    margin-top: 20px;
+  }
+  .my-info .photo__greeting{
+    grid-column: 3/1;
+    grid-row: 1/1;
+  }
+  .my-info .my-info__first-question,.my-info .my-info__second-question{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 20vh;
+  }
+  .my-info__container:hover{
+    grid-row: 1 / span 3;
+  }
+  .first:hover {
+    grid-column: 1/ span 2;
+  }
+  .second:hover{
+    grid-column: 4/ span 1;
+  }
+  main .my-projects__web-development::-webkit-scrollbar{
+      height: 0px;
+  }
