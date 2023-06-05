@@ -46,6 +46,10 @@
   .social-medias__container, .navigation__profile-link,  .blog__user-actions, .user-actions__contacts, .user-actions__write, .user-actions__contacts > div, .user-actions__write > div, .my-info, .my-info__container, .my-projects__title1, .my-projects__web-development, .web-development__project, .project__image, .my-info__photo {
     display: flex;
   }
+  .user-actions__contacts, .user-actions__write{
+    align-self: center;
+    margin: 30px 0 50px;
+  }
   .head {
     grid-template-rows: 1fr 1fr;
     height: 140px;
@@ -120,13 +124,14 @@
     margin-top: 70px;
   }
   .user-actions__contacts, .user-actions__write{
-    margin:10px;
-    justify-content: space-evenly;
+    justify-self: center;
     margin: 30px 0 50px;
   }
   .user-actions__contacts > div, .user-actions__write > div{
+    justify-content: center;
     flex-direction: column;
     margin-left: 10px;
+    margin-top:20px;
     width: 160px;
     color: #010101;
   }
@@ -135,25 +140,22 @@
     font-family: var(--primary-font);
     font-weight: var(--chubby);
     outline:none;
-    border: none;
+    border: 2px solid #2b6c2b;
     background: transparent;
-    width: max-content;
+    border-radius: 50px;
+    padding:5px 15px;
     cursor: pointer;
   }
   .contacts__description,.write__description, .contacts__description b ,.write__description b{
     font-size: var(--normal);
   }
   .user-actions__contacts img, .user-actions__write img{
-    width: 35%;
+    width: 45%;
     max-width: 200px;
     height: 120px;
     margin-top: 20px;
   }
   /*Status*/
-  .contacts__title:hover,.write__title:hover{
-      color: #535353;
-      border-bottom: 2px solid #5fbaa7;
-  }
   .blog__watch-more{
     width: max-content;
     height: max-content;
@@ -220,11 +222,12 @@
   }
   .my-info__photo{
     justify-content: center;
-    background-image: url("https://i.ibb.co/BjMhDfB/dav.jpg");
+    background-image: url("https://i.ibb.co/fD3fnC3/MiFoto.jpg");
     border: 2px solid var(--opaque-color-green);
     border-radius: 50%;
-    min-width: 200px;
-    height: 230px;
+    min-width: 240px;
+    height: 240px;
+     background-position: center;
   }
   .photo__greeting{
     display: none;
@@ -350,20 +353,34 @@
     background-color: var(--opaque-color-red);
   }
   footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-top: 20px solid var(--opaque-color-green);
-    height: 75px;
+    height: 100px;
     width: 100%;
     background: #555;
     text-align: center;
-    vertical-align: middle;
     color: #eee;
   }
-  footer p{
+  div ul li, ol li{
+    font-size: var(--normal);
+    margin: 10px 0;
+  }
+  footer p, b,em{
     font-size: var(--normal);
   }
+  footer b{
+    font-size: var(--small);
+  }
+  em{
+    color: darkgreen;
+  } 
   /*Status*/
   a:hover{
-    color:var(--opaque-color-red);
+    color:inherit;
+    text-decoration: none;
+    cursor:pointer;
   }
   .navigation__profile-link a:hover{
     border-bottom:1px solid var(--opaque-color-red);
@@ -390,4 +407,7 @@
   .blog__watch-more:hover,   .principal__watch-more:hover{
     border-top: 2px solid var(--opaque-color-green);
     border-bottom: 2px solid var(--opaque-color-green);
+  }
+  .contacts__title:hover, .write__title:hover{
+      background-color: #3ce9b1;
   }
